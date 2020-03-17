@@ -84,6 +84,24 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text="Mainly for dry cough, fever and fatigue"))
         return 0
+    
+    if event.message.text == "corona-now":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="Loading last COCID-19 statistics..."))
+        return 0
+
+    if event.message.text == "corona country":
+       line_bot_api.reply_message(
+           event.reply_token,
+            TextSendMessage(text="Loading last COCID-19 statistics for some countries..."))
+       return 0
+
+    if event.message.text == "corona countries":
+       line_bot_api.reply_message(
+           event.reply_token,
+           TextSendMessage(text="162 countries are affected"))
+       return 0
         
     if event.message.text == "start":
         buttons_template = TemplateSendMessage(
@@ -99,7 +117,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='Statistics',
-                        text='symptom'
+                        text='corona-now'
                     ),
                     MessageTemplateAction(
                         label='Symptom',
