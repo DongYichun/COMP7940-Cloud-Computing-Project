@@ -72,6 +72,18 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
+    
+    if event.message.text == "symptom":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties."))
+        return 0
+
+    if event.message.text == "main-symptom":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="Mainly for dry cough, fever and fatigue"))
+        return 0
         
     if event.message.text == "start":
         buttons_template = TemplateSendMessage(
@@ -87,11 +99,15 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='Statistics',
-                        text='a'
+                        text='symptom'
                     ),
                     MessageTemplateAction(
                         label='Symptom',
-                        text='b'
+                        text='symptom'
+                    ),
+                    MessageTemplateAction(
+                        label='Main Symptom',
+                        text='main-symptom'
                     ),
                 ]
             )
