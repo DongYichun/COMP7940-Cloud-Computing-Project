@@ -4,12 +4,14 @@ After discussion we decided to do Line project
 
 Feature: 
 
-contest 
+Contest
+
 Make a directory with all the features you can find
 Input:  "start" to get content
 Convenient for users to obtain robot commands and reduce user input errors.
 
-summary of news
+Summary of news
+
 First determine the source of the data.
 We can find a calendar control on the page and get content about COVID-19 for the day
 When the user enters news, it returns the latest three articles about COVID-19
