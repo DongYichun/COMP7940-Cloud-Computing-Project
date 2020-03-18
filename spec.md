@@ -16,7 +16,7 @@ Feature: Real-time COVID-19 statistics
 When a user sends a message to chatbot, chatbot will reply with statistics based on contents of a message.
 
 "Corona now": Replies with latest statistics of Coronavirus around the world.
-"Corona (name of country)": Replies with latest statistics of country user requested.
+"Corona country(name of country)": Replies with latest statistics of country user requested.
 "Corona countries": Replies with number of affected countries
 
 3. For Luo Dan
